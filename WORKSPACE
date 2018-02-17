@@ -21,13 +21,13 @@ gazelle_dependencies()
 go_repository(
     name = "com_github_fishy_fsdb",
     importpath = "github.com/fishy/fsdb",
-    commit = "746acff65e58e70e21a0c6ecfbe85bad2d7c99f9",
+    commit = "5527ded0137100d26d3b85b6473aab591f98959b",
 )
 
 go_repository(
     name = "com_github_aws_aws_sdk_go",
     importpath = "github.com/aws/aws-sdk-go",
-    commit = "1b176c5c6b57adb03bb982c21930e708ebca5a77",
+    commit = "bff41fb23b7550368282029f6478819d6a99ae0f",
 )
 
 go_repository(
