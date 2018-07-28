@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"io/ioutil"
+	"log"
 	"strings"
 	"testing"
 
@@ -32,20 +33,20 @@ sunt in culpa qui officia deserunt mollit anim id est laborum.`
 	fmt.Println(bkt.IsNotExist(err)) // true
 
 	if err := bkt.Write(ctx, obj, strings.NewReader(content)); err != nil {
-		// TODO: error handling
+		log.Fatal(err)
 	}
 	reader, err := bkt.Read(ctx, obj)
 	if err != nil {
-		// TODO: error handling
+		log.Fatal(err)
 	}
 	defer reader.Close()
 	buf, err := ioutil.ReadAll(reader)
 	if err != nil {
-		// TODO: error handling
+		log.Fatal(err)
 	}
 	fmt.Println(string(buf)) // content
 	if err := bkt.Delete(ctx, obj); err != nil {
-		// TODO: error handling
+		log.Fatal(err)
 	}
 }
 
